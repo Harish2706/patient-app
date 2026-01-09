@@ -1,5 +1,5 @@
 ### GET request to example server
-PUT http://localhost:5000/patients/223e4567-e89b-12d3-a456-426614174015
+PUT http://localhost:5000/patients/223e4567-e89b-12d3-a456-426614174014
 Content-Type: application/json
 
 {
@@ -7,8 +7,8 @@ Content-Type: application/json
     "name": "Isabella sucker",
     "email": "isabella.walker@example.com",
     "address": "789 Willow St, Springfield",
-    "dateOfBirth": "1987-10-17",
-     "registeredDate": "1358-12-27"
+    "dateOfBirth": "1987-10-17"
+
   }
 
 ###
