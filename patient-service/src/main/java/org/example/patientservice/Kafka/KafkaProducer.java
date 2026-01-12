@@ -16,15 +16,19 @@ public class KafkaProducer{
     }
 
     public void sendEvent(Patient patient){
-        PatientEvent event = PatientEvent.newBuilder().setPatientId(patient.getId()
-                .toString()).setName(patient.getName()).setEmail(patient.getEmail())
-                .setEventType("PatientCreated").build();
+        PatientEvent event = PatientEvent.newBuilder()
+                .setPatientId(patient.getId().toString())
+                .setName(patient.getName())
+                .setEmail(patient.getEmail())
+                .setEventType("PatientCreated")
+                .build();
 
-        try{
-            kafkaTemplate.send("patient",event.toByteArray());
-        }
-        catch (Exception e){
-            log.error("Error sending event patientcreated even:",e);
+        try {
+            kafkaTemplate.send("patient", event.toByteArray());
+            // ADD THIS LOG LINE:
+            log.info("Sent Kafka event for Patient ID: {}", patient.getId());
+        } catch (Exception e) {
+            log.error("Error sending event patient created even:", e);
         }
     }
 
