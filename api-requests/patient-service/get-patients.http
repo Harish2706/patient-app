@@ -1,3 +1,6 @@
 ### GET request to get all patients
+@token = eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlckB0ZXN0LmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc2ODU1NDY3OCwiZXhwIjoxNzY4NTkwNjc4fQ.Wsr0FUiLChRgT1hozvA1boJYNq-zuuhPYFrXGALmv54
+
 GET http://localhost:4004/api/patients/get
+Authorization: Bearer {{token}}
 ###
